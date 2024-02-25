@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    background: linear-gradient(135deg, rgb(1, 255, 251),rgb(36, 171, 255));
+    width: 100%;
+    height: 100vh;
+}
+#search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgb(121, 247, 247),rgb(162, 224, 255));
+}
+#search input{
+    border: 0px;
+    outline: 0px;
+    height: 40px;
+    width: 300px;
+    margin: 10px;
+    font-size: 20px;
+}
+.weather-Icon{
+    width: 160px;
+    margin-top:25px;
+    justify-content: center;
+    align-items: center;
+}
+#weather{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgb(121, 247, 247),rgb(162, 224, 255));
+}
+
+#weather h1{
+    font-size: 75px;
+    font-weight: 500;
+
+}
+#weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    
+}
+.city{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    height: 60px;
+    width: 60px;
+    margin-right:10px ;
+
+}
+.humidity, .wind{
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: -6px;
+}
+.error {
+    margin: 2px;
+    display: none;
+    
+}
+
+.clock{ 
+    width: 100%;
+    border: 1px solid rgb(146, 144, 144) ;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgb(121, 247, 247),rgb(162, 224, 255));
+}
+.clock ul{
+    list-style: none;
+    display: flex;
+    font-weight: 600;
+    font-size: 25px;
+}
+#Date{
+    font-size: 20px;
+}
+
+/* city card */
+.weather-Icon1{
+    width: 90px;
+    margin-top:25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+#weathercard{
+   
+}

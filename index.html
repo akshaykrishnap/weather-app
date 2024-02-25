@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+
+    <!-- font cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- stylecss -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- icon -->
+    <link rel="icon" href="https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png">
+
+    <!-- bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    
+    <div class="container-fluid">
+<div class="row">
+
+<!-- cards city -->
+    <div class="col-md-4 justify-content-center align-items-centre flex-column">
+
+        <!-- sydney -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column  " id="weathercard" >
+
+    <h3 class="text-align-center justify-content-center align-items-centre ">Sydney</h3>
+    <div class="col">  
+      
+         <img src="./rain-removebg-preview.png" id="weather-Icon2" class="weather-Icon1 justify-content-center" alt="rain">
+        
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp2"></h2>
+    </div>
+ 
+</div>
+
+
+<!-- london -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column"><h3>London</h3>
+  
+    <div class="col">   
+        <img src="./rain-removebg-preview.png"  id="weather-Icon3" class="weather-Icon1 justify-content-center" alt="rain">
+        
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp3"></h2>
+    </div>
+
+</div>
+
+<!-- delhi -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column"><h3>Delhi</h3>
+
+    <div class="col">  
+         <img src="./rain-removebg-preview.png" id="weather-Icon4" class="weather-Icon1 justify-content-center" alt="rain">
+       
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp4"></h2>
+    </div>
+
+</div>
+
+<!-- paris -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column"><h3>Paris</h3>
+ 
+    <div class="col"> 
+          <img src="./rain-removebg-preview.png" id="weather-Icon5" class="weather-Icon1 justify-content-center" alt="rain">
+        
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp5"></h2>
+    </div>
+
+</div>
+
+<!-- dubai -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column"><h3>Dubai</h3>
+
+    <div class="col"> 
+          <img src="./rain-removebg-preview.png" id="weather-Icon6" class="weather-Icon1 justify-content-center" alt="rain">
+        
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp6"></h2>
+    </div>
+
+</div>
+
+<!-- germany -->
+<div class="card m-4 w-50 justify-content-center align-items-centre flex-column"><h3>Germany</h3>
+ 
+    <div class="col"> 
+          <img src="./rain-removebg-preview.png" id="weather-Icon7" class="weather-Icon1 justify-content-center" alt="rain">
+        
+        <img src="./temp-removebg-preview.png" class="weather-Icon1 justify-content-center"  alt="">
+        <h2 class="temp7"></h2>
+    </div>
+
+</div>
+
+    </div>
+
+    <div class="col-md-4">
+<div class="card  bg-transparent">
+   <div id="search" class="w-100 md-3 justify-content-center align-center">
+    <input class="rounded" type="text" placeholder="Enter City Name" spellcheck="false">
+    <button type="button" class="btn btn-outline-secondary "><i class="fa-solid fa-magnifying-glass fa-1.8x rounded"></i></button>
+</div>
+
+<div class="error">
+    <p class="text-danger fs-5">*Invalid City Name</p>
+</div>
+
+<div id="weather"class="justify-content-center" >
+    <h2 class="city"></h2><br>
+    <img src="/rain-removebg-preview.png" class="weather-Icon justify-content-center" alt="rain">
+   <div class="col">
+   
+    <h2 class="temp"></h2>
+    <img src="./temp-removebg-preview.png" alt="">
+    <h2 class="temp1"></h2>
+    <img src="./temp-removebg-preview.png" alt="">
+   </div>
+
+    <br>
+    <div class="details">
+        <div class="col">
+            <img src="/humidity-removebg-preview.png" alt="humidity">
+            <div>
+                <p class="humidity fs-3 "></p>
+                <p class="fs-2">Humidity</p>
+            </div>
+        </div>
+        <div class="col">
+            <img src="/wind-removebg-preview.png" alt="humidity">
+            <div>
+                <p class="wind fs-3"></p>
+                <p class="fs-2">Wind Speed</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div> 
+
+</div>
+
+<!-- clock -->
+<div class="col-md-4">
+  
+    <div class="row w-100 align-right">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="div1">
+           <div class="clock justify-content-center fw-bold">
+           <br> <div class="m-2" id="Date">Monday 26 January 2024</div>
+            <ul>
+                <li id="hours">00</li>
+                <li id="point">:</li>
+                <li id="min">00</li>
+                <li id="point">:</li>
+                <li id="sec">00</li>
+
+            </ul>
+           </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</div>
+    </div>
+
+</body>
+
+<script>
+
+
+/* js code */
+const apiKey ="eb2b2db3442011ec91a9827e70241689";
+const apiUrl ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+
+
+
+const searchBox = document.querySelector("#search input");
+const searchBtn = document.querySelector("#search button");
+const weatherIcon = document.querySelector(".weather-Icon");
+
+async function checkWeather(city){
+    const response =await fetch(apiUrl + city + `&appid=${apiKey}`);
+  
+    if (response.status == 404) {
+        document.querySelector(".error").style.display ="block";
+        document.querySelector("#weather").style.display ="none";
+    } else {
+        var data = await response.json();
+  
+  /* console.log(data); */
+
+document.querySelector(".city").innerHTML =data.name;
+document.querySelector(".temp").innerHTML =data.main.temp +"°c";
+document.querySelector(".temp1").innerHTML ="But feels like " + data.main.feels_like + "°c";
+document.querySelector(".humidity").innerHTML =data.main.humidity + "%";
+document.querySelector(".wind").innerHTML =data.wind.speed + "km/hr";
+
+if (data.weather[0].main=="Clouds") {
+ weatherIcon.src ="./clounds-removebg-preview.png"
+}
+else if (data.weather[0].main=="Clear") {
+  weatherIcon.src ="./sun-removebg-preview.png"
+}
+else if (data.weather[0].main=="Rain") {
+  weatherIcon.src ="./rain-removebg-preview.png"
+}
+else if (data.weather[0].main=="Drizzle") {
+  weatherIcon.src ="./drizzle-removebg-preview.png"
+}
+else if (data.weather[0].main=="Mist") {
+  weatherIcon.src ="./mist-removebg-preview.png"
+}
+document.querySelector("#weather").style.display ="block";
+document.querySelector(".error").style.display ="none";
+    }
+  
+ 
+}
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+})
+
+/* clock js code */
+function clock() {
+  var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var dayNames =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+ /* dates */
+  var today = new Date();
+  
+  document.getElementById('Date').innerHTML = (dayNames[today.getDay()] + " " + today.getDate() + ' ' + monthNames[today.getMonth()] + ' ' + today.getFullYear() )
+
+/* time */
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+var day = h<11?'AM':'PM';
+h = h<10? '0' +h:h;
+m = m<10? '0' +m:m;
+s = s<10? '0' +s:s;
+document.getElementById('hours').innerHTML = h;
+document.getElementById('min').innerHTML = m;
+document.getElementById('sec').innerHTML = s;
+}
+var inter = setInterval(clock,400);
+
+/* city weathers */
+
+/* sydney */
+const apiKeyq ="eb2b2db3442011ec91a9827e70241689";
+const apiUrlq ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=sydney";
+const weatherIcon1 = document.querySelector("#weather-Icon2");
+
+async function checkWeather1(){
+    const response =await fetch(apiUrlq +`&appid=${apiKeyq}`)
+    var data1 = await response.json();
+    console.log(data1);
+    document.querySelector(".temp2").innerHTML = data1.main.temp +"°c";
+
+    if (data1.weather[0].main=="Clouds") {
+ weatherIcon1.src ="./clounds-removebg-preview.png"
+}
+else if (data1.weather[0].main=="Clear") {
+  weatherIcon1.src ="./sun-removebg-preview.png"
+}
+else if (data1.weather[0].main=="Rain") {
+  weatherIcon1.src ="./rain-removebg-preview.png"
+}
+else if (data1.weather[0].main=="Drizzle") {
+  weatherIcon1.src ="./drizzle-removebg-preview.png"
+}
+else if (data1.weather[0].main=="Mist") {
+  weatherIcon1.src ="./mist-removebg-preview.png"
+}
+
+
+    }
+
+    
+checkWeather1();
+
+/* london */
+const apiKeyw ="eb2b2db3442011ec91a9827e70241689";
+const apiUrlw ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=london";
+const weatherIcon2 = document.querySelector("#weather-Icon3");
+
+
+async function checkWeather2(){
+    const response =await fetch(apiUrlw +`&appid=${apiKeyw}`)
+    var dataw = await response.json();
+    console.log(dataw);
+    document.querySelector(".temp3").innerHTML = dataw.main.temp +"°c";
+
+    if (dataw.weather[0].main=="Clouds") {
+ weatherIcon2.src ="./clounds-removebg-preview.png"
+}
+else if (dataw.weather[0].main=="Clear") {
+  weatherIcon2.src ="./sun-removebg-preview.png"
+}
+else if (dataw.weather[0].main=="Rain") {
+  weatherIcon2.src ="./rain-removebg-preview.png"
+}
+else if (dataw.weather[0].main=="Drizzle") {
+  weatherIcon2.src ="./drizzle-removebg-preview.png"
+}
+else if (dataw.weather[0].main=="Mist") {
+  weatherIcon2.src ="./mist-removebg-preview.png"
+}
+}
+    
+checkWeather2();
+
+/* delhi */
+const apiKeye ="eb2b2db3442011ec91a9827e70241689";
+const apiUrle ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=delhi";
+
+const weatherIcon3 = document.querySelector("#weather-Icon4");
+
+async function checkWeather3(){
+    const response =await fetch(apiUrle +`&appid=${apiKeye}`)
+    var datae = await response.json();
+    console.log(datae);
+    document.querySelector(".temp4").innerHTML = datae.main.temp +"°c";
+ 
+    if (datae.weather[0].main=="Clouds") {
+ weatherIcon3.src ="./clounds-removebg-preview.png"
+}
+else if (datae.weather[0].main=="Clear") {
+  weatherIcon3.src ="./sun-removebg-preview.png"
+}
+else if (datae.weather[0].main=="Rain") {
+  weatherIcon3.src ="./rain-removebg-preview.png"
+}
+else if (datae.weather[0].main=="Drizzle") {
+  weatherIcon3.src ="./drizzle-removebg-preview.png"
+}
+else if (datae.weather[0].main=="Mist") {
+  weatherIcon3.src ="./mist-removebg-preview.png"
+}
+}
+    
+checkWeather3();
+
+/* paris */
+const apiKey4 ="eb2b2db3442011ec91a9827e70241689";
+const apiUrl4 ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=paris";
+
+const weatherIcon4 = document.querySelector("#weather-Icon5");
+
+async function checkWeather4(){
+    const response =await fetch(apiUrl4 +`&appid=${apiKey4}`)
+    var data4 = await response.json();
+    console.log(data4);
+    document.querySelector(".temp5").innerHTML = data4.main.temp +"°c";
+
+    if (data4.weather[0].main=="Clouds") {
+ weatherIcon4.src ="./clounds-removebg-preview.png"
+}
+else if (data4.weather[0].main=="Clear") {
+  weatherIcon4.src ="./sun-removebg-preview.png"
+}
+else if (data4.weather[0].main=="Rain") {
+  weatherIcon4.src ="./rain-removebg-preview.png"
+}
+else if (data4.weather[0].main=="Drizzle") {
+  weatherIcon4.src ="./drizzle-removebg-preview.png"
+}
+else if (data4.weather[0].main=="Mist") {
+  weatherIcon4.src ="./mist-removebg-preview.png"
+}
+
+}
+    
+checkWeather4();
+
+/* dubai */
+const apiKey6 ="eb2b2db3442011ec91a9827e70241689";
+const apiUrl6 ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=dubai";
+
+const weatherIcon5 = document.querySelector("#weather-Icon6");
+
+async function checkWeather6(){
+    const response =await fetch(apiUrl6 +`&appid=${apiKey6}`)
+    var data6 = await response.json();
+    console.log(data6);
+    document.querySelector(".temp6").innerHTML = data6.main.temp +"°c";
+
+    if (data6.weather[0].main=="Clouds") {
+ weatherIcon5.src ="./clounds-removebg-preview.png"
+}
+else if (data6.weather[0].main=="Clear") {
+  weatherIcon5.src ="./sun-removebg-preview.png"
+}
+else if (data6.weather[0].main=="Rain") {
+  weatherIcon5.src ="./rain-removebg-preview.png"
+}
+else if (data6.weather[0].main=="Drizzle") {
+  weatherIcon5.src ="./drizzle-removebg-preview.png"
+}
+else if (data6.weather[0].main=="Mist") {
+  weatherIcon5.src ="./mist-removebg-preview.png"
+}
+
+}
+    
+checkWeather6();
+
+/* germany */
+const apiKey7 ="eb2b2db3442011ec91a9827e70241689";
+const apiUrl7 ="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=dubai";
+
+const weatherIcon6 = document.querySelector("#weather-Icon7");
+
+async function checkWeather7(){
+    const response =await fetch(apiUrl7 +`&appid=${apiKey7}`)
+    var data7 = await response.json();
+    console.log(data7);
+    document.querySelector(".temp7").innerHTML = data7.main.temp +"°c";
+
+    if (data7.weather[0].main=="Clouds") {
+ weatherIcon6.src ="./clounds-removebg-preview.png"
+}
+else if (data7.weather[0].main=="Clear") {
+  weatherIcon6.src ="./sun-removebg-preview.png"
+}
+else if (data7.weather[0].main=="Rain") {
+  weatherIcon6.src ="./rain-removebg-preview.png"
+}
+else if (data7.weather[0].main=="Drizzle") {
+  weatherIcon6.src ="./drizzle-removebg-preview.png"
+}
+else if (data7.weather[0].main=="Mist") {
+  weatherIcon6.src ="./mist-removebg-preview.png"
+}
+
+}
+    
+checkWeather7();
+
+</script>
+
+</script>
+
+</html>
